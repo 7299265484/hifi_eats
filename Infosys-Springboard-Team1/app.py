@@ -299,6 +299,7 @@ def edit_user(user_id):
 def deactivate_user(user_id):
     if not is_admin():
         flash('Access denied. Admins only.', 'error')
+        print("hello")
         return redirect(url_for('index'))
 
     conn = get_db()
